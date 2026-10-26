@@ -11,7 +11,7 @@ app.use(express.json());
 const categorieRouter = require("./routes/categorie.route.js");
 app.use("/api/categories", categorieRouter);
 mongoose
-  .connect(process.env.dbbase)
+  .connect(process.env.db_cloud)
   .then(() => {
     console.log("DataBase Successfully Connected");
   })
